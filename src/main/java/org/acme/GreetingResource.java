@@ -8,11 +8,11 @@ import java.util.List;
 @Path("/parameters")
 public class GreetingResource {
 
-@GET
-@Path("/wrapperList")
-public String wrapperList(@QueryParam("wrapperList") final List<WrapperClass<StatusEnum>> wrapperList) {
-    return wrapperList.stream().map(WrapperClass::getValue).toList().toString();
-}
+    @GET
+    @Path("/wrapperList")
+    public String wrapperList(@QueryParam("wrapperList") final List<WrapperClass<StatusEnum>> wrapperList) {
+        return wrapperList.stream().map(WrapperClass::getValue).toList().toString();
+    }
 
 
     @GET
